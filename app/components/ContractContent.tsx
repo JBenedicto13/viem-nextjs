@@ -2,7 +2,7 @@ import React from "react";
 import ContractForm from "./ContractForm";
 
 const ContractContent = () => {
-  const contractAddress = process.env.CONTRACT_ADDRESS;
+  const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
   return (
     <div className="border border-slate-950 p-5 rounded-md w-4/12">
       <h1 className="text-xl">Contract Content</h1>
