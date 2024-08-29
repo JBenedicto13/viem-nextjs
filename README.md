@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web3 Fullstack Best Practices
 
-## Getting Started
+### Macro Alignment, Micro Execution
 
-First, run the development server:
+Do small, reviewable, and digestible changes that align with the bigger picture of what your product is intending to do.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> Imagine all the future problems that may come and make sure you design it in such a way that it will be able to adapt to that change.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Be Pragmatic
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+While we all have ideas of "IDEALISTIC" versions of our code, it is best to be pragmatic (practical) in your decision making. Make sure that you make decisions based on your context.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+E.g. It would be nice to have all our code maintainable and have really small couplings, but for most timelines this is unrealistic. So in those cases it's okay to take on a little bit of tech debt to prioritize goals.
 
-## Learn More
+Balance Best Practices with Progress
 
-To learn more about Next.js, take a look at the following resources:
+# Common Best Practices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Maintainability
+- Easily changed without breaking anything
+- Divided into small, digestible code (Don't need to read entire code base to be productive)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Scalability
+- Make sure it can be stretched to the needs of demand
 
-## Deploy on Vercel
+### Readability
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The less someone has to re-read or try to understand your code, the faster teams can be productive.
+- Should be easy for any engineer to improve and change
+- Easy to follow flow
