@@ -13,24 +13,10 @@ export default function ConnectWallet({
   isConnected,
   setIsConnected,
 }: ConnectWalletProps) {
+	const {handleClick} = useWallet();
+
   const [address, setAddress] = useState<string | null>(null);
   const [balance, setBalance] = useState<string | null>(null);
-
-  async function handleClick() {
-    try {
-      const walletClient = await ConnectWalletClient();
-      const publicClient = await ConnectPublicClient();
-
-      const [address] = await walletClient.requestAddresses();
-      const balance = formatEther(await publicClient.getBalance({ address }));
-
-      setAddress(address);
-      setBalance(balance);
-      setIsConnected(true);
-    } catch (error) {
-      alert(`Transaction failed: ${error}`);
-    }
-  }
 
   return (
     <div className="flex flex-col gap-3 w-4/12">
